@@ -1,0 +1,124 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+/*
+    FOOTER.CSS
+    ========================================
+    DEDICATED CSS FILE FOR THE HEADER ON ALL PAGES
+    EXCEPT 'login.html' AND 'register.html'. ALLOWS
+    FOR EASY NAVIGATION OF STYLING IF THE CTRL+F 
+    SHORTCUT IS UNAVAILABLE, AS WELL AS MAKES THE CSS
+    MORE ORGANISED.
+*/
+#footer {
+    width: 100%;
+    background-color: #22292f;
+    padding: 20px;
+    margin: 0;
+    font-size: 14px;
+    color: #ffffff;
+    border-top: 2px solid #444444;
+    bottom: 0;
+}
+#footer h1 {
+    font-size: 20px;
+}
+#footerRight {
+    width: 49%;
+    right: 20;
+    display: inline-block;
+}
+#footerLeft {
+    width: 49%;
+    left: 20;
+    display: inline-block;
+}
+#footerNavbar {
+    padding-bottom: 50px;
+}
+#footerNavbar ul {
+    display: inline;
+    list-style: none;
+}
+#footerNavbar li {
+    display: inline-block;
+    margin: 0;
+}
+#footerNavbar p, #footerNavbar a {
+    font-size: 13px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#footer #footerLeft #footerHelp {
+    color: limegreen;
+    text-decoration: underline;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#footer #socialMediaLinks a {
+    text-decoration: none;
+    color: #ffffff;
+    margin: 5px;
+    padding-right: 5px;
+}
+#footer #socialMediaLinks span {
+    font-size: 25px;
+    padding: 2px;
+}
+.copyright {
+    padding-bottom: 20px;
+}
+#footer #footerRight input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #ECECEC;
+    width: 70%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #000000;
+}
+#footer #footerRight textarea {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #ECECEC;
+    width: 70%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #000000;
+}
+#footer #footerRight button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #4caf50;
+    width: 30%;
+    border: 0;
+    padding: 10px;
+    color: #ffffff;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    align-self: center;
+}
+
+/*
+    MEDIA QUERY TO ENSURE FOOTER SEGMENTS ALIGN
+    CORRECTLY WHEN SCREEN IS COMPACTED.
+*/
+@media screen and (max-width: 800px) {
+    #footer #footerLeft, #footer #footerRight {
+        width: 100%;
+        text-align: center;
+    }
+    #footerLeft {
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Brookfield Garden and Pet Centre | Home</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="assets/css/main.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/nav.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/slideshow.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/footer.css" rel="stylesheet" type="text/css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/slideshow.js"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <!-- Header (Banner + Navigation Bar) -->
+        <div id="header">
+
+            <!--
+                    +===================================================================+
+                     NAVIGATION BAR
+                    +===================================================================+
+
+                    The website's navigation bar is seperated into two seperate sections,
+                    #navbarCollapsed and #navbarFull. #navbarCollapsed is only displayed
+                    when the page width is below 800px (Media query is ACTIVE), and CSS 
+                    sets the following:
+
+                    `#navbarCollapsed {
+                        dislay: block;
+                    }`
+
+                    where it is set to `display: none` when the media query is inactive.
+                    
+                    #navbarFull is set to `display: block` when the media query is INACTIVE
+                    (Greater than 800px width). Then when the media query is active, 
+                    #navbarFull is set to `display: none`.
+
+                    +===================================================================+
+                     STYLING OF HEADER
+                    +===================================================================+
+
+                    Heirarchy of dividers is as follows with reasoning:
+                    - Collapsed navigation bar 
+                      + Wanted to always be at the top of the screen, therefore it was
+                        placed above the header image unlike the regular navigation bar.
+                    - Header image
+                      + Needed to be above the regular navigation bar but below the
+                        collapsed navigation bar.
+                    - Full/regular navigation bar 
+                      + Needed to be below header images and other contents. Decided not
+                        to make it sticky, so it could be left here. 
+                -->
+
+            <!-- Divider for the collapsed navigation bar -->
+            <div id="navbarCollapsed">
+
+                <span id="navbarToggle" class="navbarToggleJS">
+                        <i class="fa fa-bars"></i>
+                    </span>
+                <a href="index.html" class="logo">Brookfield</a>
+                <ul id="navLinksCollapsed" class="static">
+                    <li><a href="index.html" class="navLinkCollapsed">Home</a></li>
+                    <li><a href="products.html" class="navLinkCollapsed">Products</a></li>
+                    <li><a href="pets.html" class="navlinkCollapsed">Pets</a></li>
+                    <li><a href="contactUs.html" class="navLinkCollapsed">Contact Us</a></li>
+                    <li><a href="login.html" id="loginLinkCollapsed">Login/Register</a></li>
+                </ul>
+
+            </div>
+
+            <!-- Divider of header images, date, time and the randon greeting -->
+            <div id="headerImage">
+                <a href="index.html" id="mainLogo">
+                        <img src="assets/img/logo-header.png" alt="Brookfield Garden and Pet Centre Logo">
+                    </a>
+                <p id="date" class="overlay"></p>
+                <p id="time" class="overlay"></p>
+                <p id="greeting" class="overlay"></p>
+            </div>
+
+            <!-- Divider for the regular, full navigation bar -->
+            <div id="navbarFull">
+                <a href="index.html" class="navLink">Home</a>
+                <a href="products.html" class="navLink">Products</a>
+                <a href="pets.html" class="navlink">Pets</a>
+                <a href="contactUs.html" class="navLink">Contact Us</a>
+                <a href="login.html" id="loginLink">Login/Register</a>
+            </div>
+        </div>
+
+        <script>
+
+            /**
+             * showDateTime() Function 
+             *****************************************************
+             * Displays time in consistent formatting, refreshing
+             * every second to ensure time is always correct.
+             **/
+            function showDataTime() {
+                // Creates a Date() object.
+                var date = new Date();
+
+                // Uses the date object to collect data from the user's device.
+                var day = date.getDate();
+                var month = date.getMonth() + 1;
+                var year = date.getFullYear();
+
+                /**
+                 * If the day or month is less than 10 a single digit value will 
+                 * we stored in the variable. For the sake of consistency, if the value 
+                 * is below 10, append a '0' to the front of the value to always have 2
+                 * digits shown on the page at all times.
+                 **/
+                if (day < 10) {
+                    day = "0" + day;
+                }
+                if (month < 10) {
+                    month = "0" + month;
+                }
+
+                // Display value in #date 
+                $("#date").text(day + "-" + month + "-" + year);
+
+                // Uses the date object to collect data from the user's device. 
+                var hour = date.getHours();
+                var minute = date.getMinutes();
+                var second = date.getSeconds();
+
+                /**
+                 * Much like before, if the values are below 10 a single digit will be
+                 * stored. For consistency, add a '0' to the value to always have 2
+                 * digits shown on the page.
+                 **/
+                if (minute < 10) {
+                    minute = "0" + minute;
+                }
+                if (second < 10) {
+                    second = "0" + second;
+                }
+                if (hour < 10) {
+                    hour = "0" + hour;
+                }
+
+                // display time in #time
+                $("#time").text(hour + ":" + minute + ":" + second);
+
+                // run function every second to ensure time and date are always correct.
+                setTimeout(showDataTime, 1000);
+            }
+
+            showDataTime();
+
+            function showRandomGreeting() {
+                /**
+                 * showRandomGreeting() function 
+                 *****************************************************
+                 * Generates a random number on page load, and 
+                 * determines which greeting to show depending on the
+                 * value generated.
+                 **/
+
+                // create a random numnber between 0 and 4.
+                var rand = Math.floor(Math.random() * 5);
+
+                // create and populate array with greetings
+                var greetings = [
+                    "Here for all your garden and pet needs",
+                    "Guaranteed fun for the whole family",
+                    "A garden centre, a pet shop, and so much more",
+                    "Browse our many products now!",
+                    "Cafes, pets and more available today!"
+                ];
+
+                // display random greeting in #greeting.
+                $("#greeting").text(greetings[rand]);
+            }
+
+            showRandomGreeting();
+        </script>
+
+        <!-- Slide show divider -->
+        <hr id="preSlideshow">
+
+        <div id="slideshow">
+            <div class="slideshowSlide" id="slideshowImg1"></div>
+            <div class="slideshowSlide" id="slideshowImg2"></div>
+            <div class="slideshowSlide" id="slideshowImg3"></div>
+        </div>
+
+        <hr id="postSlideshow">
+
+        <div class="textBlock">
+            <p>Brookfield Garden and Pet Centre offers services for all your garden and pet needs! With 3 years of experience,
+                Brookfield Garden and Pet Centre are an experienced organisation dedicated to caring for your wildlife and
+                pet services. In addition to providing garden and pet services, Brookfield Garden and Pet Centre also services
+                as a fantastic day out for the family, providing gardens and a cafe for your daily needs.</p>
+        </div>
+
+        <!-- Divider used to seperate page, as well as display links to relevant areas -->
+        <div class="bluePanel">
+            <div id="welcomeBlock">
+                <h1>Brookfield Garden & Pet Centre</h1>
+                <hr id="nameUnderline">
+                <h2>Welcome to Brookfield Garden and Pet Centre, the perfect place to for a family visit</h2>
+            </div>
+            <!-- Square blocks used for images and links -->
+            <div class="linkBlock">
+                <div class="linkBlockLinks" id="linkBlock1"></div>
+                <div class="linkBlockLinks" id="linkBlock2"></div>
+                <div class="linkBlockLinks" id="linkBlock3"></div>
+            </div>
+
+            <!-- Lorem ipsum text as a placeholder. Use to break page -->
+            <p>Quisque sit amet nisi ante. Maecenas eu pellentesque mauris, sed tempus urna. Maecenas quis porttitor felis.
+                Integer at tortor at odio aliquam euismod id ut tellus. Suspendisse non semper enim. Morbi varius elit a
+                bibendum pellentesque. Vivamus varius enim vel diam fermentum, ullamcorper faucibus justo semper.</p>
+        </div>
+
+        <div class="whitePanel">
+
+            <!-- 
+                    Show opening hours on home page to avoid confusion. 
+                    As opening hours are now given, placeholders are provided
+                    by other gardening centres and averaged.
+                -->
+            <div id="openingHours">
+                <h1>Opening Hours</h1>
+                <hr>
+                <h2>Week Opening Hours</h2>
+                <h3>Monday to Saturday</h3>
+                <p>9.00am to 6.00pm</p>
+                <h3>Sunday</h3>
+                <p>10.30am to 4.00pm</p>
+                <h3>Bank Holiday</h3>
+                <p>10.00am to 5.00pm</p>
+            </div>
+        </div>
+
+        <!-- footer with copyright -->
+        <div id="footer">
+
+            <!-- left-hand box of footer divider -->
+            <div id="footerLeft">
+
+                <!-- Small menu on footer for easy navigation of whole website -->
+                <div id="Navbar-HAndLinks">
+                    <h1>Brookfield Garden and Pet Centre</h1>
+                    <div id="footerNavbar">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li>
+                                <p> - </p>
+                            </li>
+                            <li><a href="products.html">Products</a></li>
+                            <li>
+                                <p> - </p>
+                            </li>
+                            <li><a href="pets.html">Pets</a></li>
+                            <li>
+                                <p> - </p>
+                            </li>
+                            <li><a href="contactUs.html">Contact</a></li>
+                            <li>
+                                <p> - </p>
+                            </li>
+                            <li><a href="login.html">Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- footer help button -->
+                <p id="footerHelp">Need assistance?</p>
+
+                <!-- copyright claim of website and material -->
+                <p class="copyright">Ryan Haytree &copy;</p>
+                <div id="socialMediaLinks">
+
+                    <!-- social media links with icons -->
+                    <a href="#">
+                            <span class="fab fa fa-twitter-square"></span>
+                        </a>
+                    <a href="#">
+                            <span class="fab fa fa-facebook-square"></span>
+                        </a>
+                    <a href="#">
+                            <span class="fa fa-instagram"></span>
+                        </a>
+                </div>
+            </div>
+
+            <!-- right-hand divider of footer -->
+            <div id="footerRight">
+
+                <!-- contact form in footer for easy contact from client -->
+                <form>
+                    <h1>Contact Us</h1>
+                    <input type="email" name="footerEmail" placeholder="Email address" required/>
+                    <textarea rows="2"></textarea>
+                </form>
+
+                <!-- submit button -->
+                <submit>
+                    <button>Send</button>
+                </submit>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

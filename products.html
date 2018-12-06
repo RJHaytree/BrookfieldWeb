@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Brookfield Garden and Pet Centre | Products</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="assets/css/main.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/nav.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/slideshow.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/footer.css" rel="stylesheet" type="text/css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/slideshow.js"></script>
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Header (Banner + Navigation Bar) -->
+        <div id="header">
+
+            <!--
+                    +===================================================================+
+                     NAVIGATION BAR
+                    +===================================================================+
+
+                    The website's navigation bar is seperated into two seperate sections,
+                    #navbarCollapsed and #navbarFull. #navbarCollapsed is only displayed
+                    when the page width is below 800px (Media query is ACTIVE), and CSS 
+                    sets the following:
+
+                    `#navbarCollapsed {
+                        dislay: block;
+                    }`
+
+                    where it is set to `display: none` when the media query is inactive.
+                    
+                    #navbarFull is set to `display: block` when the media query is INACTIVE
+                    (Greater than 800px width). Then when the media query is active, 
+                    #navbarFull is set to `display: none`.
+
+                    +===================================================================+
+                     STYLING OF HEADER
+                    +===================================================================+
+
+                    Heirarchy of dividers is as follows with reasoning:
+                    - Collapsed navigation bar 
+                      + Wanted to always be at the top of the screen, therefore it was
+                        placed above the header image unlike the regular navigation bar.
+                    - Header image
+                      + Needed to be above the regular navigation bar but below the
+                        collapsed navigation bar.
+                    - Full/regular navigation bar 
+                      + Needed to be below header images and other contents. Decided not
+                        to make it sticky, so it could be left here. 
+                -->
+
+            <!-- Divider for the collapsed navigation bar -->
+            <div id="navbarCollapsed">
+
+                <!-- menu icons made into a button -->
+                <span id="navbarToggle" class="navbarToggleJS">
+                        <i class="fa fa-bars"></i>
+                    </span>
+                <a href="index.html" class="logo">Brookfield</a>
+                <ul id="navLinksCollapsed" class="static">
+                    <li><a href="index.html" class="navLinkCollapsed">Home</a></li>
+                    <li><a href="products.html" class="navLinkCollapsed">Products</a></li>
+                    <li><a href="pets.html" class="navlinkCollapsed">Pets</a></li>
+                    <li><a href="contactUs.html" class="navLinkCollapsed">Contact Us</a></li>
+                    <li><a href="login.html" id="loginLinkCollapsed">Login/Register</a></li>
+                </ul>
+            </div>
+
+            <!-- header image -->
+            <div id="headerImage">
+                <a href="index.html" id="mainLogo">
+                        <img src="assets/img/logo-header.png" alt="Brookfield Garden and Pet Centre Logo">
+                    </a>
+            </div>
+
+            <!-- full navigation bar -->
+            <div id="navbarFull">
+                <a href="index.html" class="navLink">Home</a>
+                <a href="products.html" class="navLink">Products</a>
+                <a href="pets.html" class="navlink">Pets</a>
+                <a href="contactUs.html" class="navLink">Contact Us</a>
+                <a href="login.html" id="loginLink">Login/Register</a>
+            </div>
+        </div>
+
+        <!-- post header title and hr line -->
+        <h1 class="postHeader">Products</h1>
+        <hr class="postHeader">
+
+        <!-- text block discussing Brookfield's products -->
+        <div class="textBlock">
+            <p>Broofield Garden and Pet Centre is home to a vast number of products, all of which ranging between gardening
+                and pet care.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et voluptate deserunt aliquam quas, alias consequatur
+                quasi voluptatem tempore, labore ducimus nemo, cum a commodi eum adipisci cumque porro consequuntur placeat!</p>
+        </div>
+
+        <!-- Gardening Equipment (Lawnmowers, trimmers, etc.) with images -->
+        <div class="bluePanel">
+            <h2>Gardening Equipment</h2>
+            <div class="linkBlock">
+                <div class="linkBlockLinks products" id="linkBlock4"></div>
+                <div class="linkBlockLinks products" id="linkBlock5"></div>
+                <div class="linkBlockLinks products" id="linkBlock6"></div>
+            </div>
+            <a href="#">
+                <p>Browse all products in our gardening range</p>
+            </a>
+        </div>
+
+        <!-- Entertainment/recreation with images -->
+        <div class="whitePanel products">
+            <h2>Entertainment and Recreation</h2>
+            <div class="linkBlock">
+                <div class="linkBlockLinks products" id="linkBlock7"></div>
+                <div class="linkBlockLinks products" id="linkBlock8"></div>
+                <div class="linkBlockLinks products" id="linkBlock9"></div>
+            </div>
+            <a href="#">
+                <p>Check to see what else we offer to make your outside experience more enjoyable</p>
+            </a>
+        </div>
+
+        <!-- Vegetation/Wildlife with images -->
+        <div class="bluePanel">
+            <h2>Vegetation and Wildlife</h2>
+            <div class="linkBlock">
+                <div class="linkBlockLinks products" id="linkBlock10"></div>
+                <div class="linkBlockLinks products" id="linkBlock11"></div>
+                <div class="linkBlockLinks products" id="linkBlock12"></div>
+            </div>
+            <a href="#">
+                <p>Browse all of our vegetation and wildlife products</p>
+            </a>
+        </div>
+
+        <!-- footer with copyright -->
+        <div id="footer">
+
+            <!-- left-hand box of footer divider -->
+            <div id="footerLeft">
+
+                <!-- Small menu on footer for easy navigation of whole website -->
+                <div id="Navbar-HAndLinks">
+                    <h1>Brookfield Garden and Pet Centre</h1>
+                    <div id="footerNavbar">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li>
+                                <p> - </p>
+                            </li>
+                            <li><a href="products.html">Products</a></li>
+                            <li>
+                                <p> - </p>
+                            </li>
+                            <li><a href="pets.html">Pets</a></li>
+                            <li>
+                                <p> - </p>
+                            </li>
+                            <li><a href="contactUs.html">Contact</a></li>
+                            <li>
+                                <p> - </p>
+                            </li>
+                            <li><a href="login.html">Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- footer help button -->
+                <p id="footerHelp">Need assistance?</p>
+
+                <!-- copyright claim of website and material -->
+                <p class="copyright">Ryan Haytree &copy;</p>
+                <div id="socialMediaLinks">
+
+                    <!-- social media links with icons -->
+                    <a href="#">
+                            <span class="fab fa fa-twitter-square"></span>
+                        </a>
+                    <a href="#">
+                            <span class="fab fa fa-facebook-square"></span>
+                        </a>
+                    <a href="#">
+                            <span class="fa fa-instagram"></span>
+                        </a>
+                </div>
+            </div>
+
+            <!-- right-hand divider of footer -->
+            <div id="footerRight">
+
+                <!-- contact form in footer for easy contact from client -->
+                <form>
+                    <h1>Contact Us</h1>
+                    <input type="email" name="footerEmail" placeholder="Email address" required/>
+                    <textarea rows="2"></textarea>
+                </form>
+
+                <!-- submit button -->
+                <submit>
+                    <button>Send</button>
+                </submit>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

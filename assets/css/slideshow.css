@@ -1,0 +1,67 @@
+/*
+    SLIDESHOW.CSS
+    =============================================
+    STYLING FOR THE SLIDESHOW ON 'index.html' SPECIFICALLY.
+    TAILORED FOR DESKTOP, LAPTOP, TABLET AND MOBILE DEVICES.
+*/
+#slideshow {
+    height: 300px;
+    margin: 0 auto; 
+    margin-top: 20px;
+    width: 100%;
+}
+.slideshowSlide {
+    margin: auto;
+    width: 800px;
+    position: relative;
+}
+#slideshowImg1 {
+    background-image: url(backgrounds/slideshow-img1.jpg);
+    background-size: cover;
+    height: 100%;
+}
+#slideshowImg2 {
+    background-image: url(backgrounds/slideshow-img2.jpg);
+    background-size: cover;
+    height: 100%;
+}
+#slideshowImg3 {
+    background-image: url(backgrounds/slideshow-img3.jpg);
+    background-size: cover;
+    height: 100%;
+}
+
+/* 
+    MAINLY STYLED SO THE IPAD HAS A GOOD VIEWING EXPERIENCE,
+    AS WELL AS ANY DEVICE WITH A SCREEN OF SIMILAR SIZE.
+*/
+@media screen and (max-width: 1023px) and (min-width: 768px){
+    #slideshow {
+        height: 350px !important;
+    }
+    #slideshowImg1, #slideshowImg2, #slideshowImg3 {
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+}
+
+/*
+    STYLING FOR SMALL, MOBILE DEVICES. EXPANDS SLIDESHOW TO 100% 
+    WIDTH, AND SETS HEIGHT TO A REASONABLE SIZE SO THE IMAGES ARE
+    NOT TOO COMPACT.
+*/
+@media screen and (max-width: 800px){
+    #slideshow {
+        width: 100%;
+        height: 150px;
+    }
+    .slideshowSlide {
+        width: 100%;
+        margin: auto;
+    }
+    #slideshowImg1, #slideshowImg2, #slideshowImg3 {
+        width: 100%;
+        background-size: 100% 100% !important;
+        background-repeat: no-repeat;
+    }
+}

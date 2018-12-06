@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Brookfield Garden and Pet Centre | Login</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="assets/css/login+reg.css" rel="stylesheet" type="text/css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="loginPage">
+
+        <!-- login form divider -->
+        <div class="form">
+            <form class="loginForm" method="POST" name="login" onsubmit="return validateLogin()">
+
+                <!-- logo which links to index.html when clicked -->
+                <a href="index.html">
+                        <img src="assets/img/logo-final.png" class="logo-img" alt="Brookfield Garden and Pet Centre Logo">
+                    </a>
+
+                <!-- title -->
+                <h2>Login</h2>
+
+                <!-- email and password inputs -->
+                <input type="email" name="loginEmail" placeholder="Email address" required/>
+                <input type="password" name="loginPassword" placeholder="Password" required autocomplete="off" />
+            </form>
+
+            <!-- submit form on click -->
+            <submit>
+                <button>login</button>
+            </submit>
+
+            <!-- link to register page -->
+            <p class="message">Not registered?
+                <a href="register.html">Create an account</a>
+            </p>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Brookfield Garden and Pet Centre | Pets</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="assets/css/main.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/nav.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/slideshow.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/footer.css" rel="stylesheet" type="text/css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/slideshow.js"></script>
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Header (Banner + Navigation Bar) -->
+        <div id="header">
+
+            <!--
+                    +===================================================================+
+                     NAVIGATION BAR
+                    +===================================================================+
+
+                    The website's navigation bar is seperated into two seperate sections,
+                    #navbarCollapsed and #navbarFull. #navbarCollapsed is only displayed
+                    when the page width is below 800px (Media query is ACTIVE), and CSS 
+                    sets the following:
+
+                    `#navbarCollapsed {
+                        dislay: block;
+                    }`
+
+                    where it is set to `display: none` when the media query is inactive.
+                    
+                    #navbarFull is set to `display: block` when the media query is INACTIVE
+                    (Greater than 800px width). Then when the media query is active, 
+                    #navbarFull is set to `display: none`.
+
+                    +===================================================================+
+                     STYLING OF HEADER
+                    +===================================================================+
+
+                    Heirarchy of dividers is as follows with reasoning:
+                    - Collapsed navigation bar 
+                      + Wanted to always be at the top of the screen, therefore it was
+                        placed above the header image unlike the regular navigation bar.
+                    - Header image
+                      + Needed to be above the regular navigation bar but below the
+                        collapsed navigation bar.
+                    - Full/regular navigation bar 
+                      + Needed to be below header images and other contents. Decided not
+                        to make it sticky, so it could be left here. 
+                -->
+
+            <!-- Divider for the collapsed navigation bar -->
+            <div id="navbarCollapsed">
+
+                <!-- menu icons made into a button -->
+                <span id="navbarToggle" class="navbarToggleJS">
+                        <i class="fa fa-bars"></i>
+                    </span>
+                <a href="index.html" class="logo">Brookfield</a>
+                <ul id="navLinksCollapsed" class="static">
+                    <li><a href="index.html" class="navLinkCollapsed">Home</a></li>
+                    <li><a href="products.html" class="navLinkCollapsed">Products</a></li>
+                    <li><a href="pets.html" class="navlinkCollapsed">Pets</a></li>
+                    <li><a href="contactUs.html" class="navLinkCollapsed">Contact Us</a></li>
+                    <li><a href="login.html" id="loginLinkCollapsed">Login/Register</a></li>
+                </ul>
+            </div>
+
+            <!-- header image with logo -->
+            <div id="headerImage">
+                <a href="index.html" id="mainLogo">
+                        <img src="assets/img/logo-header.png" alt="Brookfield Garden and Pet Centre Logo">
+                    </a>
+            </div>
+
+            <!-- full navbar -->
+            <div id="navbarFull">
+                <a href="index.html" class="navLink">Home</a>
+                <a href="products.html" class="navLink">Products</a>
+                <a href="pets.html" class="navlink">Pets</a>
+                <a href="contactUs.html" class="navLink">Contact Us</a>
+                <a href="login.html" id="loginLink">Login/Register</a>
+            </div>
+        </div>
+
+        <!-- post header title and hr line -->
+        <h1 class="postHeader">Pets</h1>
+        <hr class="postHeader">
+
+        <!-- text block with description of pet sector -->
+        <div class="textBlock">
+            <p>Browse and meet all of the amazing pets Brookfield Garden and Pet Centre has to offer. Ranging from cats to lizards,
+                Brookfield offers an animal to suite any family's needs.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At voluptate ut doloremque eaque amet. Dignissimos,
+                repudiandae magni fugit totam excepturi illo quibusdam? Dicta tempore in harum provident vel, itaque qui?</p>
+        </div>
+
+        <!-- blue panel with reptile info and images -->
+        <div class="bluePanel">
+            <h2>Reptiles and Amphibians</h2>
+            <p>Brookfield Garden and Pet Centre caters a vast array of reptiles and amphibians, including snakes, lizards, frogs,
+                spiders and many more species. All reptiles and amphibians are cared for by our highly motivated and experienced
+                team, ensuring they are equiped with the best equipment at all times. We also have a large selected of glass
+                cabinets, UV lights, heat sources, habitat and vegetation available to help new pet owners eqiup them home
+                in a proper fashion, all of which are at a reasonable price.</p>
+            <div class="linkBlock">
+                <div class="linkBlockLinks products" id="linkBlock13"></div>
+                <div class="linkBlockLinks products" id="linkBlock14"></div>
+                <div class="linkBlockLinks products" id="linkBlock15"></div>
+            </div>
+        </div>
+
+        <!-- white panel with pet info and images -->
+        <div class="whitePanel pets">
+            <h2>Small Mammals</h2>
+            <p>The Brookfield Garden and Pet Centre is home to a wide variety of small mammals, including: hamsters, guinea
+                pigs, rabbits and mice. All small mammals at Brookfield Garden and Pet Centre are looking for a forever home,
+                and are on display at the small mammal sector. Equipment to aid in the care of small mammals is also available,
+                including cages, food and toys.</p>
+            <p>View our selection of cats which are currently looking for a forever home! All cats at Brookfield Garden and
+                Pet Centre are rescue or gifted pets, and are actively looking for a friendly family to take them home</p>
+            <div class="linkBlock">
+                <div class="linkBlockLinks products" id="linkBlock16"></div>
+                <div class="linkBlockLinks products" id="linkBlock17"></div>
+                <div class="linkBlockLinks products" id="linkBlock18"></div>
+            </div>
+        </div>
+
+        <!-- blue panel with bird info and images -->
+        <div class="bluePanel">
+            <h2>Birds</h2>
+            <p>Many of everyone's favourite bird species are available at Brookfield Garden and Pet Centre, including budgies,
+                exotic parrots and parakeets, cockatiels and canaries. All of the equipment necessary to care for all of
+                our bird species is available at Brookfield Garden and Pet Centre, including a wide range of cages, toys
+                and accessories. Our experienced staff members are also on hand to provide support when choosing the bird
+                species and finding suitable equipment.</p>
+            <div class="linkBlock">
+                <div class="linkBlockLinks products" id="linkBlock19"></div>
+                <div class="linkBlockLinks products" id="linkBlock20"></div>
+                <div class="linkBlockLinks products" id="linkBlock21"></div>
+            </div>
+        </div>
+
+        <!-- footer with copyright -->
+        <div id="footer">
+
+            <!-- left-hand box of footer divider -->
+            <div id="footerLeft">
+
+                <!-- Small menu on footer for easy navigation of whole website -->
+                <div id="Navbar-HAndLinks">
+                    <h1>Brookfield Garden and Pet Centre</h1>
+                    <div id="footerNavbar">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li>
+                                <p> - </p>
+                            </li>
+                            <li><a href="products.html">Products</a></li>
+                            <li>
+                                <p> - </p>
+                            </li>
+                            <li><a href="pets.html">Pets</a></li>
+                            <li>
+                                <p> - </p>
+                            </li>
+                            <li><a href="contactUs.html">Contact</a></li>
+                            <li>
+                                <p> - </p>
+                            </li>
+                            <li><a href="login.html">Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- footer help button -->
+                <p id="footerHelp">Need assistance?</p>
+
+                <!-- copyright claim of website and material -->
+                <p class="copyright">Ryan Haytree &copy;</p>
+                <div id="socialMediaLinks">
+
+                    <!-- social media links with icons -->
+                    <a href="#">
+                            <span class="fab fa fa-twitter-square"></span>
+                        </a>
+                    <a href="#">
+                            <span class="fab fa fa-facebook-square"></span>
+                        </a>
+                    <a href="#">
+                            <span class="fa fa-instagram"></span>
+                        </a>
+                </div>
+            </div>
+
+            <!-- right-hand divider of footer -->
+            <div id="footerRight">
+
+                <!-- contact form in footer for easy contact from client -->
+                <form>
+                    <h1>Contact Us</h1>
+                    <input type="email" name="footerEmail" placeholder="Email address" required/>
+                    <textarea rows="2"></textarea>
+                </form>
+
+                <!-- submit button -->
+                <submit>
+                    <button>Send</button>
+                </submit>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

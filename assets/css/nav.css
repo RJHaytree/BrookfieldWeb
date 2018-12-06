@@ -1,0 +1,89 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+#navbarFull {
+    background-color: #0f3854;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    overflow: hidden;
+    border-bottom: 2px #0E3047 solid;
+}
+#navbarCollapsed {
+    display: none;
+}
+#navbarFull a {
+    padding-right: 15px;
+    padding-left: 15px;
+    text-decoration: none;
+    padding-bottom: 9px;
+    padding-top: 10px;
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+}
+#navbarFull a:hover {
+    border-bottom: 3px limegreen solid;
+    background-color: #174869;
+    text-decoration: none;
+    color: #ffffff;
+}
+@media screen and (max-width: 800px) { 
+    #navbarCollapsed {
+        display: block;
+        background-color: #0f3854;
+        border-bottom: 2px #0E3047 solid;
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+    }
+    #navbarCollapsed li {
+        list-style-type: none;
+        text-align: center;
+        margin: 0 auto;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        width: 100%;
+        background-color: #0f3854;
+    }
+    #navbarFull {
+        display: none;
+    }
+    #navbarCollapsed a {
+        text-decoration: none;
+        color: #ffffff;
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+        width: 100%;
+    }
+    #navbarCollapsed li:hover {
+        border-bottom: 2px limegreen solid;
+        background-color: #174869;
+        text-decoration: none;
+        color: #ffffff;
+    }
+    #navbarToggle {
+        display: inline-block;
+        font-size: 22px;
+        margin-top: 10px;
+        margin-left: 20px;
+        color: #ffffff;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+    }
+    #navbarCollapsed .logo {
+        text-decoration: none;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 22px;
+        display: inline-block;
+        padding-top: 10px;
+        margin-left: 20px;
+        padding-bottom: 10px;
+    }
+    .active {
+        display: block;
+    }
+    .static {
+        display: none;
+    }
+}

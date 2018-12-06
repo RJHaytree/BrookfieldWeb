@@ -1,0 +1,14 @@
+PAGES                                                                           | STATUS (COMPLETED, IN PROGRESS, NULL)
+================================================================================|=============================================================
+  - Login (login.html)                                                          | COMPLETED
+  - Register (register.html)                                                    | COMPLETED
+  - Home (index.html)                                                           | COMPLETED
+  - Contact (contactUs.html)                                                    | COMPLETED
+  - Pets (pets.html)                                                            | COMPLETED
+  - Products (products.html)                                                    | COMPLETED
+================================================================================|=============================================================
+Thinks to include and location:                                                 | 
+================================================================================|=============================================================
+  - slideshow (index.html)                                                      | COMPLETED
+  - current date and time (index.html) 						                              | COMPLETED
+  - random greeting (index.html) 					                                      | COMPLETED

@@ -1,0 +1,380 @@
+@import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono);
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+/**
+ * MAIN.CSS
+ **************************************************
+ * Main css for for the entire website. Includes formatting for all
+ * pages except login and reg forms which are seperate.
+ */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+body {
+    background-image: url(backgrounds/background-wood1.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-size: 0;
+}
+#wrapper {
+    width: 1280px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    height: 100%;
+    -webkit-box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.1), -10px 5px 5px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.1), -10px 5px 5px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.1), -10px 5px 5px 0 rgba(0, 0, 0, 0.1);
+    overflow-x: hidden;
+}
+#header {
+    width: 100%;
+    -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 10px rgb(0, 0, 0, 0.2);
+    margin: 0;
+}
+#headerImage {
+    background-image: url(backgrounds/header-fence.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    border-bottom: 2px #0E3047 solid;
+    margin: 0;
+}
+#headerImage img {
+    display: block;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+.overlay {
+    font-family: 'Share Tech Mono', monospace;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+}
+#date {
+    font-size: 20px;
+}
+#time {
+    font-size: 50px;
+}
+#greeting {
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+#preSlideshow {
+    background-color: #0E3047;
+    border: 0;
+    height: 2px;
+    width: 65%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+#postSlideshow {
+    background-color: #0E3047;
+    border: 0;
+    height: 2px;
+    width: 65%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.textBlock {
+    margin: 0 auto;
+    font-size: 17px;
+    color: #174869;
+    max-width: 80%;
+    margin-top: 20px;
+    text-align: center;
+}
+.bluePanel h1 {
+    font-family: "Roboto", sans-serif;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+}
+.bluePanel p {
+    margin: 0 auto;
+    font-size: 17px;
+    color: #ffffff;
+    max-width: 80%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+#nameUnderline {
+    width: 800px;
+    color: white;
+    margin: 0 auto;
+}
+.bluePanel h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.bluePanel {
+    margin-top: 20px;
+    width: 100%;
+    background-color: #174869;
+    padding: 10px;
+    border-top: 1px solid #0E3047;
+    border-bottom: 1px solid #0E3047;
+}
+.linkBlock {
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.linkBlockLinks {
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    display: inline-block;
+    margin: 10px;
+}
+#linkBlock1 {
+    background-image: url(backgrounds/lawnmower.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#linkBlock2 {
+    background-image: url(backgrounds/dogplaying.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#linkBlock3 {
+    background-image: url(backgrounds/tea-and-cake.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#openingHours h1 {
+    font-weight: bold;
+    color: #174869;
+    text-align: center;
+}
+#openingHours h2 {
+    color: #174869;
+    text-align: center;
+}
+#openingHours h3 {
+    color: #174869;
+    text-align: center;
+}
+#openingHours p {
+    color: #174869;
+    text-align: center;
+    font-size: 16px;
+}
+#openingHours hr {
+    width: 800px;
+    color: #174869;
+    margin: 0 auto;
+    border: 1px #174869 solid;
+}
+#openingHours {
+    margin-bottom: 30px;
+}
+hr.postHeader {
+    background-color: #0E3047;
+    border: 0;
+    height: 2px;
+    width: 65%;
+    margin: 0 auto;
+    margin-top: 20px; 
+}
+h1.postHeader {
+    color: #174869;
+    text-align: center;
+}
+.products h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #174869;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.pets h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #174869;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.contact h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #174869;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.whitePanel {
+    padding-top: 10px;
+}
+#linkBlock4 {
+    background-image: url(backgrounds/lawnmower.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#linkBlock5 {
+    background-image: url(backgrounds/shovel.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#linkBlock6 {
+    background-image: url(backgrounds/raking.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#linkBlock7 {
+    background-image: url(backgrounds/fishing.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#linkBlock8 {
+    background-image: url(backgrounds/swing.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#linkBlock9 {
+    background-image: url(backgrounds/trampoline.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#linkBlock10 {
+    background-image: url(backgrounds/rose.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#linkBlock11 {
+    background-image: url(backgrounds/lilly.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#linkBlock12 {
+    background-image: url(backgrounds/clover.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#linkBlock13 {
+    background-image: url(backgrounds/green-tree-python.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#linkBlock14 {
+    background-image: url(backgrounds/lizard.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#linkBlock15 {
+    background-image: url(backgrounds/frog.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#linkBlock16 {
+    background-image: url(backgrounds/cat-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#linkBlock17 {
+    background-image: url(backgrounds/guinea-pig.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#linkBlock18 {
+    background-image: url(backgrounds/rabbits.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#linkBlock19 {
+    background-image: url(backgrounds/parrot.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#linkBlock20 {
+    background-image: url(backgrounds/budgie.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#linkBlock21 {
+    background-image: url(backgrounds/canary.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.whitePanel p {
+    margin: 0 auto;
+    font-size: 17px;
+    color: #174869;
+    max-width: 80%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.contact p {
+    margin: 0;
+    font-size: 17px;
+    color: #174869;
+}
+.left {
+    text-align: center;
+    width: 50%;
+    display: inline-block;
+}
+.right {
+    text-align: center;
+    width: 50%;
+    display: inline-block;
+}
+iframe {
+    width: 100%;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px){
+    .linkBlockLinks {
+        width: 30% !important;
+        height: 0 !important;
+        padding-top: 30% !important;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #wrapper {
+        width: 100%;
+    }
+    #headerImage {
+        margin: 0 auto;
+        background-position: center;
+        padding-top: 55px;
+    }
+    #nameUnderline {
+        width: 100%;
+    }
+    .linkBlockLinks {
+        width: 70%;
+        height: 0;
+        padding-top: 70%;
+        margin-bottom: 10px;
+    }
+    #openingHours hr {
+        width: 95%;
+    }
+    #headerImage img {
+        width: 90%;
+    }
+    .left {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .right {
+        width: 100%;
+    }
+}
