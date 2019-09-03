@@ -9,7 +9,7 @@
     <title>Brookfield Garden and Pet Centre | Products</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link href="assets/css/main.css" rel="stylesheet" type="text/css">
     <link href="assets/css/nav.css" rel="stylesheet" type="text/css">
     <link href="assets/css/slideshow.css" rel="stylesheet" type="text/css">
@@ -18,7 +18,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="assets/js/app.js"></script>
     <script src="assets/js/slideshow.js"></script>
 </head>
@@ -110,6 +110,32 @@
                 and pet care.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et voluptate deserunt aliquam quas, alias consequatur
                 quasi voluptatem tempore, labore ducimus nemo, cum a commodi eum adipisci cumque porro consequuntur placeat!</p>
+        </div>
+
+        <div class="centre">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#videoModal">LAUNCH VIDEO</button>
+        </div>
+        <!-- Button trigger modal -->
+        <!-- Modal -->
+        <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Products at Brookfield</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <video style="height: 100%; width: 100%;" controls>
+                            <source src="assets/video/Products.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Gardening Equipment (Lawnmowers, trimmers, etc.) with images -->

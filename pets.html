@@ -9,7 +9,7 @@
     <title>Brookfield Garden and Pet Centre | Pets</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link href="assets/css/main.css" rel="stylesheet" type="text/css">
     <link href="assets/css/nav.css" rel="stylesheet" type="text/css">
     <link href="assets/css/slideshow.css" rel="stylesheet" type="text/css">
@@ -18,9 +18,10 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="assets/js/app.js"></script>
     <script src="assets/js/slideshow.js"></script>
+    <script src="assets/js/game.js"></script>
 </head>
 
 <body>
@@ -86,8 +87,8 @@
             <!-- header image with logo -->
             <div id="headerImage">
                 <a href="index.html" id="mainLogo">
-                        <img src="assets/img/logo-header.png" alt="Brookfield Garden and Pet Centre Logo">
-                    </a>
+                     <img src="assets/img/logo-header.png" alt="Brookfield Garden and Pet Centre Logo">
+                </a>
             </div>
 
             <!-- full navbar -->
@@ -111,6 +112,94 @@
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At voluptate ut doloremque eaque amet. Dignissimos,
                 repudiandae magni fugit totam excepturi illo quibusdam? Dicta tempore in harum provident vel, itaque qui?</p>
         </div>
+
+        <!-- button for modal -->
+        <div class="centre">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#gameModal">LAUNCH GAME</button>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="gameModal" tabindex="-1" role="dialog" aria-labelledby="gameModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">PET PREDICTOR</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h6>WHAT TYPE OF ANIMAL IS RIGHT FOR YOU?</h6>
+                        <div id="question1" class="question">
+                            <div class="question-block-full">
+                            <p>Do you like fluffy animals?</p>
+                                <div class="question-block" onclick="processAns(0, 1)">
+                                    <p>YES</p>
+                                </div>
+                                <div class="question-block" onclick="processAns(0, 2)">
+                                    <p>NO</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="question2" class="question">
+                                <div class="question-block-full">
+                                    <p>Are you financially able to handle a large pet?</p>
+                                <div class="question-block" onclick="processAns(1, 1)">
+                                    <p>YES</p>
+                                </div>
+                                <div class="question-block" onclick="processAns(1, 2);">
+                                    <p>NO</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="question3" class="question">
+                            <div class="question-block-full">
+                                <p>Do you have a medium to large garden?</p>
+                                <div class="question-block" onclick="processAns(2, 1)">
+                                    <p>YES</p>
+                                </div>
+                                <div class="question-block" onclick="processAns(2, 2)">
+                                    <p>NO</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="question4" class="question">
+                            <div class="question-block-full">
+                                <p>Is your home near a busy road?</p>
+                                <div class="question-block" onclick="processAns(3, 1)">
+                                    <p>YES</p>
+                                </div>
+                                <div class="question-block" onclick="processAns(3, 2)">
+                                    <p>NO</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="question5" class="question">
+                            <div class="question-block-full">
+                                <p>Do you prefer small, medium or large animals?</p>
+                                <div class="question-block" onclick="processAns(4, 1)">
+                                    <p>SMALL</p>
+                                </div>
+                                <div class="question-block" onclick="processAns(4, 2)">
+                                    <p>MEDIUM</p>
+                                </div>
+                                <div class="question-block" onclick="processAns(4, 3)">
+                                    <p>LARGE</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="answer">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+
+        </script>
 
         <!-- blue panel with reptile info and images -->
         <div class="bluePanel">

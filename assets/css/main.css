@@ -140,9 +140,13 @@ body {
     margin: 10px;
 }
 #linkBlock1 {
-    background-image: url(backgrounds/lawnmower.jpg);
+    background-color: #174869;
+    background-image: url(backgrounds/swing-gif.gif);
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
+    top: -20px;
+    right: 40px;
 }
 #linkBlock2 {
     background-image: url(backgrounds/dogplaying.jpg);
@@ -338,6 +342,76 @@ iframe {
     width: 100%;
 }
 
+.btn-primary {
+    background-color: #174869;
+    color: #ffffff;
+}
+
+.centre {
+    width: 130px;
+    margin: 0 auto;
+}
+
+.h1, .h2, .h3, h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.question p {
+    color: black;
+    font-size: 16px;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.question-block-full {
+    margin: 0 auto;
+}
+
+.question-block {
+    display: inline-block;
+    width: 45%;
+    height: 100px;
+    margin: 10px;
+    background-color: #29C411;
+    align-content: center;
+    text-align: center;
+    line-height: 100px;
+}
+
+.question-block p {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.question-block:hover {
+    background-color: #2EDB13;
+    cursor: pointer;
+}
+
+#answer {
+    text-align: center;
+}
+
+#answer p {
+    font-size: 20px;
+    color: black;
+}
+
+#answer h3 {
+    font-size: 25px;
+    color: black;
+    font-weight: bold;
+}
+
 @media screen and (max-width: 1024px) and (min-width: 768px){
     .linkBlockLinks {
         width: 30% !important;
@@ -376,5 +450,8 @@ iframe {
     }
     .right {
         width: 100%;
+    }
+    .question-block {
+        width: 95%;
     }
 }
